@@ -50,7 +50,7 @@ jobs:
             sudo docker rm -f ${{ secrets.PROJECT_NAME }}
             sudo docker rm -i ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
-            sudo docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} \
+            sudo docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} ${{ secrets.PROJECT_NAME }}\
             --name ${{ secrets.PROJECT_NAME }} \
             -e PORT=${{ secrets.PORT }}
             -e DB_URL=${{ secrets.DB_URL }} \
