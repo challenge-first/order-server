@@ -1,0 +1,48 @@
+server:
+  port: 0
+  servlet:
+    encoding:
+      force: true
+
+spring:
+  application:
+    name: order-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+
+eureka:
+#  instance:
+#    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_DEFAULT_ZONE}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ${ACTUATOR_END_POINT}
+kafka:
+  producer:
+    topic:
+      product: ${KAFKA_TOPIC_PRODUCT}
+      order: ${KAFKA_TOPIC_ORDER}
+  address: ${KAFKA_ADDRESS}
+
+#logging:
+#  level:
+#    com.example.orderserver: DEBUG

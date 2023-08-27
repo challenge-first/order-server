@@ -5,6 +5,7 @@ import com.example.orderserver.dto.ResponseMessageDto;
 import com.example.orderserver.member.LoginMember;
 import com.example.orderserver.messagequeue.KafkaProducer;
 import com.example.orderserver.service.OrderService;
+import io.micrometer.core.annotation.Timed;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,6 +24,7 @@ public class OrderController {
     }
 
     @PostMapping("/products/{productId}")
+    @Timed(value = "orders.payment", longTask = true)
     public ResponseEntity<ResponseMessageDto> payment(@PathVariable Long productId,
                                      @RequestBody RequestOrderDto requestDto,
                                      @LoginMember Long memberId) throws ExecutionException, InterruptedException {
