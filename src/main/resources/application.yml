@@ -53,6 +53,6 @@ kafka:
       order: ${KAFKA_TOPIC_ORDER}
   address: ${KAFKA_ADDRESS}
 
-#logging:
-#  level:
-#    com.example.orderserver: DEBUG
+logging:
+  pattern:
+    level: "%5p [%X{traceId:-},  %X{spanId:-}]"

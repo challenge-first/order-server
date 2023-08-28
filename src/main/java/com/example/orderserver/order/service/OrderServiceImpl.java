@@ -1,4 +1,4 @@
-package com.example.orderserver.service;
+package com.example.orderserver.order.service;
 
 import com.example.orderserver.client.MemberServiceClient;
 import com.example.orderserver.client.ProductServiceClient;
@@ -8,7 +8,7 @@ import com.example.orderserver.dto.ResponsePointDto;
 import com.example.orderserver.dto.ResponseStockDto;
 import com.example.orderserver.entity.Order;
 import com.example.orderserver.entity.OrderStatus;
-import com.example.orderserver.repository.OrderRepository;
+import com.example.orderserver.order.repository.OrderRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

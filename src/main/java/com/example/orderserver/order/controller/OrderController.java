@@ -1,10 +1,10 @@
-package com.example.orderserver.controller;
+package com.example.orderserver.order.controller;
 
 import com.example.orderserver.dto.RequestOrderDto;
 import com.example.orderserver.dto.ResponseMessageDto;
 import com.example.orderserver.member.LoginMember;
 import com.example.orderserver.messagequeue.KafkaProducer;
-import com.example.orderserver.service.OrderService;
+import com.example.orderserver.order.service.OrderService;
 import io.micrometer.core.annotation.Timed;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

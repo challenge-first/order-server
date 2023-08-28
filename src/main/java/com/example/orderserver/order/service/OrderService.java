@@ -1,4 +1,4 @@
-package com.example.orderserver.service;
+package com.example.orderserver.order.service;
 
 import com.example.orderserver.dto.RequestOrderDto;
 import com.example.orderserver.dto.ResponseMessageDto;
