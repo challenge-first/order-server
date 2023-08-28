@@ -62,6 +62,6 @@ jobs:
             -e KAFKA_ADDRESS=${{ secrets.KAFKA_ADDRESS }} \
             -e ZIPKIN_BASE_URL=${{ secrets.ZIPKIN_BASE_URL }} \
             -e ACTUATOR_END_POINT=${{ secrets.ACTUATOR_END_POINT }} \
-            -e PRIVATE_ID=${{ secrets.PRIVATE_IP }} \
+            -e PRIVATE_IP=${{ secrets.PRIVATE_IP }} \
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
 
