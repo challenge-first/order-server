@@ -63,3 +63,4 @@ jobs:
             -e ZIPKIN_BASE_URL=${{ secrets.ZIPKIN_BASE_URL }} \
             -e ACTUATOR_END_POINT=${{ secrets.ACTUATOR_END_POINT }} \
             -d ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
+            -d ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
