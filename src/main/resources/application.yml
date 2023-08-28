@@ -30,6 +30,8 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: ${EUREKA_DEFAULT_ZONE}
+  instance:
+    hostname: ${PRIVATE_IP}
 
 management:
   endpoints:
